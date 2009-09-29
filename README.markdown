@@ -9,11 +9,9 @@
 RunCodeRun Gem
 ==============
 
-http://runcoderun.com
+Hook up [RunCodeRun](http://runcoderun.com) builds from your command line.  
 
-Hook up RunCodeRun builds from your command line.  
-
-== Note on Patches/Pull Requests
+## Note on Patches/Pull Requests
  
 * Fork the project.
 * Make your feature addition or bug fix.
@@ -24,6 +22,15 @@ Hook up RunCodeRun builds from your command line.
    bump version in a commit by itself I can ignore when I pull)
 * Send me a pull request. Bonus points for topic branches.
 
-== Copyright
+## Todos
+
+lots and lots - patches welcome!
+
+* project status
+* build status
+* rebuild
+* grabbing latest build output
+
+## Copyright
 
 Copyright (c) 2009 Rob Sanheim. See LICENSE for details.
