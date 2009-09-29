@@ -4,32 +4,32 @@
     | |  | |_| | | | | (_| (_) | (_| |  __/ |  | |_| | | | |
     |_|   \__,_|_| |_|\___\___/ \__,_|\___|_|   \__,_|_| |_|
 
-
+                           ( the gem )
 
 RunCodeRun Gem
 ==============
 
 Hook up [RunCodeRun](http://runcoderun.com) builds from your command line.  
 
-Right now we just support open:
+Install:
 
-    $ git clone it://github.com/floehopper/mocha.git
+    gem install runcoderun
+    
+Usage:
+
+    cd [your-runcoderun-enabled-project]
+    runcoderun [command] [options]
+      or
+    rcr [command] [options]
+
+Right now we just support open - try it out:
+    
+    $ git clone git://github.com/floehopper/mocha.git
     $ cd mocha
     $ rcr open            # opens http://runcoderun.com/floehopper/mocha in your default browser
     $ runcoderun open     # if you like to type more
 
-## Note on Patches/Pull Requests
- 
-* Fork the project.
-* Make your feature addition or bug fix.
-* Add tests for it. This is important so I don't break it in a
-  future version unintentionally.
-* Commit, do not mess with rakefile, version, or history.
-  (if you want to have your own version, that is fine but
-   bump version in a commit by itself I can ignore when I pull)
-* Send me a pull request. Bonus points for topic branches.
-
-## Todos
+## TODOs
 
 lots and lots - patches welcome!
 
@@ -37,6 +37,18 @@ lots and lots - patches welcome!
 * build status
 * rebuild
 * grabbing latest build output
+
+## Note on Patches/Pull Requests
+ 
+* Fork the project.
+* Make your feature addition or bug fix.
+* Add tests for your change.
+* Push and verify the build runs on RunCodeRun.  
+  Check out the mainline build [here](http://runcoderun.com/rsanheim/runcoderun-gem)
+* Commit, do not mess with rakefile, version, or history.
+  (if you want to have your own version, that is fine but
+   bump version in a commit by itself I can ignore when I pull)
+* Send me a pull request. Bonus points for topic branches.
 
 ## Copyright
 
