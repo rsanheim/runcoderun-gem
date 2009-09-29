@@ -20,6 +20,7 @@ module RunCodeRun
   end
   
   def invoke(command, *args)
+    command = command.intern
     debug "Invoking command: #{command}, args: #{args.inspect}"
     if all_commands.include?(command)
       Commands.send(command, *args)
