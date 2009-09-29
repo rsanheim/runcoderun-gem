@@ -12,7 +12,7 @@ begin
   end
 
 rescue LoadError
-  puts "Jeweler (or a dependency) not available. Install it with: sudo gem install jeweler"
+  puts "Jeweler (or a dependency) not available. Install it with: sudo gem install jeweler"w
 end
 
 require 'micronaut/rake_task'
