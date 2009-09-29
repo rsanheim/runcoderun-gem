@@ -9,8 +9,8 @@ begin
     gem.email = "rsanheim@gmail.com"
     gem.homepage = "http://github.com/rsanheim/runcoderun-gem"
     gem.authors = ["Rob Sanheim"]
+    gem.rubyforge_project = 'thinkrelevance'
   end
-
 rescue LoadError
   puts "Jeweler (or a dependency) not available. Install it with: sudo gem install jeweler"
 end
