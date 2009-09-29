@@ -11,6 +11,13 @@ RunCodeRun Gem
 
 Hook up [RunCodeRun](http://runcoderun.com) builds from your command line.  
 
+Right now we just support open:
+
+    $ git clone it://github.com/floehopper/mocha.git
+    $ cd mocha
+    $ rcr open            # opens http://runcoderun.com/floehopper/mocha in your default browser
+    $ runcoderun open     # if you like to type more
+
 ## Note on Patches/Pull Requests
  
 * Fork the project.
