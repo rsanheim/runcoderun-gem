@@ -41,7 +41,7 @@ end
 
 task :default => :examples
 
-task :release => ["examples", "rubyforge:release"]
+task :release => ["examples"]
 
 require 'rake/rdoctask'
 Rake::RDocTask.new do |rdoc|
