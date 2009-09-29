@@ -16,7 +16,7 @@ module RunCodeRun
   end
   
   def all_commands
-    Commands.public_instance_methods(true).sort
+    Commands.public_instance_methods(true).sort.map {|m| m.intern }
   end
   
   def invoke(command, *args)
