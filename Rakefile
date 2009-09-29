@@ -9,6 +9,9 @@ begin
     gem.email = "rsanheim@gmail.com"
     gem.homepage = "http://github.com/rsanheim/runcoderun-gem"
     gem.authors = ["Rob Sanheim"]
+    gem.add_dependency "launchy"
+    gem.add_development_dependency "mocha"
+    gem.add_development_dependency "micronaut"
     gem.rubyforge_project = 'thinkrelevance'
   end
   Jeweler::RubyforgeTasks.new do |rubyforge|

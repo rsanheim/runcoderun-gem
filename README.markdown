@@ -22,7 +22,8 @@ Usage:
       or
     rcr [command] [options]
 
-Right now we just support open - try it out:
+Right now we just support open.  Open opens up your project homepage on RunCodeRun in your default browser.
+Try it out:
     
     $ git clone git://github.com/floehopper/mocha.git
     $ cd mocha
