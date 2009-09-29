@@ -1,6 +1,17 @@
-= runcoderun-gem
+                                   _                       
+     _ __ _   _ _ __   ___ ___   __| | ___ _ __ _   _ _ __  
+    | '__| | | | '_ \ / __/ _ \ / _` |/ _ \ '__| | | | '_ \ 
+    | |  | |_| | | | | (_| (_) | (_| |  __/ |  | |_| | | | |
+    |_|   \__,_|_| |_|\___\___/ \__,_|\___|_|   \__,_|_| |_|
 
-Description goes here.
+
+
+RunCodeRun Gem
+==============
+
+http://runcoderun.com
+
+Hook up RunCodeRun builds from your command line.  
 
 == Note on Patches/Pull Requests
  
