@@ -1,27 +1,40 @@
 require 'pathname'
+lib_dir = Pathname(__FILE__).expand_path.dirname.to_s
+$LOAD_PATH.unshift(lib_dir) unless $LOAD_PATH.include?(lib_dir)
+
 require 'launchy'
+require 'commands/commands'
 
 module RunCodeRun
   extend self
   def activate(args)
-    @original_args = args.clone
-    invoke(args.shift, *args)
+    if args.empty? || args.nil?
+      invoke("help")
+    else
+      invoke(args.shift, *args)
+    end
+  end
+  
+  def all_commands
+    Commands.public_instance_methods(true).sort
   end
   
   def invoke(command, *args)
     debug "Invoking command: #{command}, args: #{args.inspect}"
-    self.send(command, args)
+    if all_commands.include?(command)
+      Commands.send(command, *args)
+    else
+      ui.puts %[The command '#{command}' does not exist; currently supported commands are '#{all_commands.join(", ")}']
+      abort
+    end
+  end
+  
+  def ui
+    $stdout
   end
   
   def debug(msg)
-    puts(msg) if true
-  end
-  
-  def open(*args)
-    current_dir = Pathname.getwd.basename
-    current_owner = guess_owner
-    url = %[http://runcoderun.com/#{current_owner}/#{current_dir}]
-    Launchy.open(url)
+    puts(msg) if $DEBUG
   end
   
   def guess_owner
