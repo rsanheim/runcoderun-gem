@@ -3,7 +3,7 @@ require 'rake'
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
-    gem.name = "runcoderun-gem"
+    gem.name = "runcoderun"
     gem.summary = %Q{runcoderun command line gem}
     gem.description = %Q{runcoderun command line gem}
     gem.email = "rsanheim@gmail.com"
@@ -40,6 +40,8 @@ rescue LoadError
 end
 
 task :default => :examples
+
+task :release => ["examples", "rubyforge:release"]
 
 require 'rake/rdoctask'
 Rake::RDocTask.new do |rdoc|
