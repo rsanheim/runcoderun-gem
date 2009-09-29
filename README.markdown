@@ -22,7 +22,8 @@ Usage:
       or
     rcr [command] [options]
 
-Right now we just support open.  Open opens up your project homepage on RunCodeRun in your default browser.
+Right now we just support open.  This opens up your project homepage on RunCodeRun in your default browser.  It is smart enough to make a best guess at the correct owner and project name from your git config.
+
 Try it out:
     
     $ git clone git://github.com/floehopper/mocha.git
