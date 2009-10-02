@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{runcoderun}
-  s.version = "0.2.2"
+  s.version = "0.3.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Rob Sanheim"]
-  s.date = %q{2009-09-29}
+  s.date = %q{2009-10-01}
   s.description = %q{runcoderun command line gem}
   s.email = %q{rsanheim@gmail.com}
   s.executables = ["rcr", "runcoderun"]
