@@ -31,21 +31,23 @@ describe RunCodeRun do
   
   describe "guess owner" do
       it "should grab owner for private repos" do
-        output =<<EOL
-origin	git@github.com:relevance/runcoderun.git (fetch)
-origin	git@github.com:relevance/runcoderun.git (push)
-EOL
+        output = "git@github.com:relevance/zeus.git"
         RunCodeRun.stubs(:run).returns(output)
         RunCodeRun.guess_owner.should == "relevance"
       end
       
       it "should grab owner for public repos" do
-        output =<<EOL
-origin	git://github.com/defunkt/github.git (fetch)
-origin	git://github.com/defunkt/github.git (push)
-EOL
+        output = "git://github.com/runcoderun/core.git"
         RunCodeRun.stubs(:run).returns(output)
-        RunCodeRun.guess_owner.should == "defunkt"
+        RunCodeRun.guess_owner.should == "runcoderun"
+      end
+      
+      it "should fail fast when it can't determine owner" do
+        output = "/src/some/local/path"
+        RunCodeRun.stubs(:run).returns(output)
+        lambda {
+          RunCodeRun.guess_owner.should == "runcoderun"
+        }.should raise_error(ArgumentError, %r{/src/some/local/path} )
       end
   end
 end

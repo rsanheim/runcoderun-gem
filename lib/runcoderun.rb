@@ -39,8 +39,12 @@ module RunCodeRun
   end
   
   def guess_owner
-    output = run("git remote -v")
-    output.match(%r{github.com[:/](\w+)})[1]
+    output = run("git config --get remote.origin.url")
+    output[/github.com[:\/](\w+)/, 1] || raise_if_no_owner(output)
+  end
+  
+  def raise_if_no_owner(output)
+    raise(ArgumentError, "Could not determine owner from git remote url: #{output}")
   end
   
   def run(cmd)
